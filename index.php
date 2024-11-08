@@ -74,6 +74,13 @@ $listagemAlmoco = $listaDeProdutosAlmoco->listarProduto($tipoProduto);
             </div>
 
         </section>
+        
+        <section class="container-almoco">
+            <p align="right" class="">
+                <a href="login.php"><img src="img/botao-login.png" width="50" 
+                    height="h50" alt="Acesso ao sistema interno"/></a>
+            </p>
+        </section>
     </main>
 </body>
 </html>

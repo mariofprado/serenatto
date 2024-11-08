@@ -1,4 +1,6 @@
 <?php
+  
+  require 'interno/Session.php';
 
   require "src/conexao-db.php";
   require "src/Modelo/Produto.php";
@@ -77,6 +79,13 @@
     <input type="submit" class="botao-cadastrar" value="Baixar Relatório" name="gerar-pdf"/>
   </form>
   </section>
+  
+  <section>
+    <p align="right">
+        <a href="interno/logout.php"><img src="img/botao-logout.png"
+            width="50" height="50" alt="Logout"/></a>
+    </p>
+</section>
 </main>
 </body>
 </html>

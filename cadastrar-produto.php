@@ -1,5 +1,7 @@
 <?php
 
+require 'interno/Session.php';
+
 require 'src/conexao-db.php';
 require 'src/Modelo/Produto.php';
 require 'src/Repositorio/ProdutoRepositorio.php';
@@ -110,6 +112,12 @@ if (isset($_POST['cadastrar'])) {
         </form>
     
     </section>
+    <section>
+    <p align="right">
+        <a href="interno/logout.php"><img src="img/botao-logout.png"
+            width="50" height="50" alt="Logout"/></a>
+    </p>
+</section>
 </main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
