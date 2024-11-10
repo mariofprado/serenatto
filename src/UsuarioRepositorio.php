@@ -9,7 +9,21 @@ class usuarioRepositorio {
         $this->pdo = $pdo;
     }
    
-    public function buscaUsuario($usuario,$senha) : bool {
+    public function buscaUsuario($usuario) : bool {
+        //retorna o numero de usuarios encontrados no db
+        $sql = "SELECT usuario FROM si_usuarios WHERE usuario = ?";
+        $statement = $this->pdo->prepare($sql);
+        $statement->bindValue(1, $usuario);
+        $statement->execute();
+        $retorno = $statement->fetchAll(PDO::FETCH_ASSOC);
+        
+        if ($retorno) {
+            return true;
+        } else return false;
+     
+    }
+    
+    public function verificaUsuarioSenha($usuario,$senha) : bool {
         //retorna true caso usurio e senha sejam verificados
         $sql = "SELECT * FROM si_usuarios WHERE usuario = ?";
         $statement = $this->pdo->prepare($sql);
@@ -22,8 +36,8 @@ class usuarioRepositorio {
         
         if ($dados) {
             //verifica se o usuario foi encontrado
-            if ($dados['senha'] == $senha) {
-                //se encontrado, verifica se a senha bate
+            if (password_verify($senha, $dados['senha']) == 1) {
+                //decodifica a senha do db e compara com a senha digitada
                 $verifica =  true;
             }
         } else {

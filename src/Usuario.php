@@ -1,12 +1,12 @@
 <?php
 
+require_once "conexao-db.php";
+
 class Usuario {
-    protected ?int $id;
     protected string $usuario;
     protected string $senha;
     
-    public function __construct(?int $id, string $usuario, string $senha) {
-        $this->id = $id;
+    public function __construct(string $usuario, string $senha) {
         $this->usuario = $usuario;
         $this->senha = $senha;
     }

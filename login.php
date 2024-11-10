@@ -11,7 +11,7 @@ if (isset($_POST['usuario']) && isset($_POST['senha'])) {
     } else {
         
         $usuario = new usuarioRepositorio($pdo);
-        $retorno = $usuario->buscaUsuario($_POST['usuario'],$_POST['senha']);
+        $retorno = $usuario->verificaUsuarioSenha($_POST['usuario'],$_POST['senha']);
         
         if ($retorno == 1) {
             if (!isset($_SESSION)) {

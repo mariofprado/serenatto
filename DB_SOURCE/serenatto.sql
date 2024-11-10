@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06/11/2024 às 16:57
+-- Tempo de geração: 11/11/2024 às 00:17
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -48,6 +48,26 @@ INSERT INTO `produtos` (`id`, `tipo`, `nome`, `descricao`, `imagem`, `preco`) VA
 (27, 'Café', 'Café com Leite Quente', 'Um café suave para o seu café da manhã', 'cafe-com-leite.jpg', 7.50),
 (28, 'Café', 'Café Gelado', 'Um ótima opção pra variar o seu café de todo dia', 'cafe-gelado.jpeg', 16.00),
 (33, 'Café', 'Pão na Chapa ', 'Pão francês com manteiga cremosa levemente tostado', 'pao-na-chapa.jpg', 8.00);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `si_usuarios`
+--
+
+CREATE TABLE `si_usuarios` (
+  `usuario` varchar(90) NOT NULL,
+  `senha` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `si_usuarios`
+--
+
+INSERT INTO `si_usuarios` (`usuario`, `senha`) VALUES
+('user1', '$2y$10$u745YACtl0ikHMYzA5RuHePmWrK2kfn4mJlBxsTpb1nYPXu3gIpXC'),
+('user3', '$2y$10$MvVpFicYC0maGFRCLrr4Z.I.GWMnowu3hn1XkLNsVv1J0OeSZTzRq'),
+('user2', '$2y$10$HZQiB/gFyjU2NbDhGsDxpO8E8yoqCiuSJAYizqjjdZo8YyFQCmbFm');
 
 --
 -- Índices para tabelas despejadas

@@ -3,6 +3,7 @@
   require 'interno/Session.php';
 
   require "src/conexao-db.php";
+  
   require "src/Modelo/Produto.php";
   require "src/Repositorio/ProdutoRepositorio.php";
 
@@ -80,6 +81,12 @@
   </form>
   </section>
   
+  <section>
+    <p align="right">
+        <a href="src/cadastrar-usuario.php"><img src="img/cadastrar-usuario.png"
+            width="50" height="50" alt="Cadastrar usuário" label="Cadastar usuaário"/></a>
+    </p>
+</section>
   <section>
     <p align="right">
         <a href="interno/logout.php"><img src="img/botao-logout.png"
